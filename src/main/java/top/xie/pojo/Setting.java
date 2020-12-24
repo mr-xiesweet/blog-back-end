@@ -1,0 +1,74 @@
+package top.xie.pojo;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.util.Date;
+
+@Entity
+@Table ( name ="tb_settings" )
+public class Setting {
+
+  	@Id
+	private String id;
+  	@Column(name = "`key`" )
+	private String key;
+  	@Column(name = "`value`" )
+	private String value;
+  	@Column(name = "create_time" )
+	private Date createTime;
+  	@Column(name = "update_time" )
+	private Date updateTime;
+
+	public String getId() {
+		return id;
+	}
+
+	public Setting() {
+	}
+
+	public Setting(String id, String key, String value, Date createTime, Date updateTime) {
+		this.id = id;
+		this.key = key;
+		this.value = value;
+		this.createTime = createTime;
+		this.updateTime = updateTime;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getKey() {
+		return key;
+	}
+
+	public void setKey(String key) {
+		this.key = key;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
+}

@@ -1,0 +1,28 @@
+server:
+  port: 2020
+spring:
+  application:
+    name: sob-blog
+  datasource:
+    url: jdbc:mysql://10.0.4.9:3306/sob_blog_system?characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: xiezihao
+    database: 1
+  jpa:
+    show-sql: true
+  redis:
+    host:  10.0.4.9 # Redis服务器地址
+    port:  6379 # Redis服务器连接端口
+    password:  xiezihao # Redis服务器连接密码
+  data:
+    solr:
+      host: http://10.0.4.9:8983/solr/sob_blog_core
+
+
+
+sob.blog.image.save-path: /home/docker_zhu/app/upload
+#2MB
+sob.blog.image.max-size: 2097152
+
+sob.blob.swagger.enable: false
